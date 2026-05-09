@@ -1569,3 +1569,19 @@ body.ready .bottom-nav {
   flex: 0 0 auto;
   scroll-snap-align: center;
 }
+  .polaroid-track {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px;
+  padding: 24vh 22px 150px;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  align-items: stretch !important;
+}
+
+.photo-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
