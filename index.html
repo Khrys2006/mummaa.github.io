@@ -1,74 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Love You Mom</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#F7B6C2" />
+    <title>Love You Mom</title>
+    <meta
+      name="description"
+      content="A dreamy cinematic Mother’s Day memory universe with hearts, songs, letters, and scrapbook memories."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <canvas id="universeCanvas" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="sparkle-layer" id="sparkleLayer" aria-hidden="true"></div>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <main class="experience" id="experience">
+      <section class="scene intro-scene active" id="introScene" data-scene="intro" aria-labelledby="introTitle">
+        <div class="intro-veil"></div>
+        <div class="cake-stage" id="cakeStage" role="button" tabindex="0" aria-label="Blow out the candles">
+          <div class="cake-glow"></div>
+          <div class="cake">
+            <div class="candle candle-one"><span></span></div>
+            <div class="candle candle-two"><span></span></div>
+            <div class="candle candle-three"><span></span></div>
+            <div class="frosting"></div>
+            <div class="cake-body"></div>
+            <div class="cake-plate"></div>
+          </div>
+        </div>
+        <div class="intro-copy">
+          <p class="script-accent">a tiny wish for you</p>
+          <h1 id="introTitle">blow out the candles 🎂</h1>
+          <p>the universe is opening softly</p>
+        </div>
+      </section>
 
-<link rel="stylesheet" href="style.css" />
-<script src="script.js" defer></script>
-</head>
+      <section class="scene dashboard-scene" id="dashboardScene" data-scene="dashboard" aria-labelledby="dashboardTitle">
+        <div class="scene-header">
+          <p class="script-accent">for the heart that made ours</p>
+          <h1 id="dashboardTitle">Happy Mother’s Day <span class="title-heart">❤️</span></h1>
+          <p class="scene-subtitle">
+            Tap a little world below. 
+          </p>
+        </div>
 
-<body>
+        <div class="memory-constellation" aria-hidden="true">
+          <span class="constellation-card card-a">pretty woman</span>
+          <span class="constellation-card card-b">queen</span>
+          <span class="constellation-card card-c">love you</span>
+          <span class="constellation-card card-d">best human</span>
+          <span class="constellation-card card-e">best mother</span>
+          <span class="constellation-card card-f">best wife</span>
+          <span class="constellation-card card-g">best chef</span>
+          <span class="constellation-card card-h">most effective doctor</span>
+        </div>
 
-<canvas id="universeCanvas"></canvas>
-<div class="grain"></div>
-<div class="sparkle-layer"></div>
+        <button class="final-pill" type="button" data-open-scene="final">
+          <span>open the ending</span>
+          <strong>Love You Mom</strong>
+        </button>
+      </section>
 
-<main class="experience">
+      <section class="scene hearts-scene" id="heartsScene" data-scene="hearts" aria-labelledby="heartsTitle">
+        <div class="section-title">
+          <p class="script-accent">tap the floating hearts</p>
+          <h2 id="heartsTitle">Hearts for you!</h2>
+        </div>
+        <div class="heart-field" id="heartField" aria-label="Floating heart messages"></div>
+        <div class="message-bottle" id="heartMessage" aria-live="polite">
+          <span>Every heart has a secret waiting inside.</span>
+        </div>
+      </section>
 
-<!-- INTRO -->
-<section class="scene active">
-  <h1>Blow out the candles 🎂</h1>
-</section>
+      <section class="scene music-scene" id="musicScene" data-scene="music" aria-labelledby="musicTitle">
+        <div class="section-title">
+          <p class="script-accent">Cassette Notebook</p>
+          <h2 id="musicTitle">Mumma's playlist</h2>
+        </div>
+        <div class="cassette-grid" id="cassetteGrid" aria-label="Cassette song list"></div>
+        <div class="player-panel" id="playerPanel" aria-live="polite">
+          <div class="player-cassette">
+            <span></span>
+            <span></span>
+            <i></i>
+          </div>
+          <div>
+            <p>Now glowing</p>
+            <h3 id="playerTitle">Choose a cassette</h3>
+          </div>
+          <button class="icon-button" id="stopMusicButton" type="button" aria-label="Stop music">■</button>
+          <div class="spotify-player" id="spotifyPlayer"></div>
+        </div>
+      </section>
 
-<!-- DASHBOARD -->
-<section class="scene">
-  <h1>Happy Mother’s Day ❤️</h1>
-</section>
+      <section class="scene letters-scene" id="lettersScene" data-scene="letters" aria-labelledby="lettersTitle">
+        <div class="section-title">
+          <p class="script-accent">paper moons and private words</p>
+          <h2 id="lettersTitle">Hanging Letters</h2>
+        </div>
+        <div class="envelope-line" id="envelopeLine" aria-label="Mother’s Day letters"></div>
+      </section>
 
-<!-- HEARTS -->
-<section class="scene">
-  <h2>Hearts</h2>
-</section>
+      <!-- REPLACE YOUR CURRENT MEMORIES SECTION WITH THIS -->
 
-<!-- MUSIC -->
-<section class="scene">
-  <h2>Music</h2>
-</section>
+<section
+  class="scene memories-scene"
+  id="memoriesScene"
+  data-scene="memories"
+  aria-labelledby="memoriesTitle"
+>
+  <div class="memory-doodles" aria-hidden="true">
+    <span class="memory-doodle doodle-one">✿</span>
+    <span class="memory-doodle doodle-two">♡</span>
+    <span class="memory-doodle doodle-three">sparkly</span>
+    <span class="memory-doodle doodle-four">xoxo</span>
+  </div>
 
-<!-- LETTERS -->
-<section class="scene">
-  <h2>Letters</h2>
-</section>
+  <div class="section-title">
+    <p class="script-accent">tiny moments, big love</p>
+    <h2 id="memoriesTitle">Memory Playground</h2>
+  </div>
 
-<!-- MEMORIES (FIXED GALLERY) -->
-<section class="scene">
-  <h2>Memory Playground</h2>
+  <!-- STATIC PHOTO GALLERY -->
+  <div class="memory-gallery" aria-label="Memory gallery">
+    <div class="photo-frame">
+      <img src="images/m1.jpg" alt="Memory 1" />
+    </div>
 
-  <div class="memory-gallery">
-    <div class="photo-frame"><img src="m1.jpg"></div>
-    <div class="photo-frame"><img src="m2.jpg"></div>
-    <div class="photo-frame"><img src="m3.jpg"></div>
-    <div class="photo-frame"><img src="m4.jpg"></div>
-    <div class="photo-frame"><img src="m5.jpg"></div>
-    <div class="photo-frame"><img src="m6.jpg"></div>
-    <div class="photo-frame"><img src="m7.jpg"></div>
-    <div class="photo-frame"><img src="m8.jpg"></div>
-    <div class="photo-frame"><img src="m9.jpg"></div>
-    <div class="photo-frame"><img src="m10.jpg"></div>
-    <div class="photo-frame"><img src="m11.jpg"></div>
+    <div class="photo-frame">
+      <img src="images/m2.jpg" alt="Memory 2" />
+    </div>
+
+    <div class="photo-frame">
+      <img src="images/m3.jpg" alt="Memory 3" />
+    </div>
+
+    <div class="photo-frame">
+      <img src="images/m4.jpg" alt="Memory 4" />
+    </div>
+
+    <div class="photo-frame">
+      <img src="images/m5.jpg" alt="Memory 5" />
+    </div>
+
+    <div class="photo-frame">
+      <img src="images/m6.jpg" alt="Memory 6" />
+    </div>
+
+    <div class="photo-frame">
+      <img src="images/m7.jpg" alt="Memory 7" />
+    </div>
+
+    <div class="photo-frame">
+      <img src="images/m8.jpg" alt="Memory 8" />
+    </div>
+
+    <div class="photo-frame">
+      <img src="images/m9.jpg" alt="Memory 9" />
+    </div>
+
+    <div class="photo-frame">
+      <img src="images/m10.jpg" alt="Memory 10" />
+    </div>
+
+    <div class="photo-frame">
+      <img src="images/m11.jpg" alt="Memory 11" />
+    </div>
   </div>
 </section>
 
-<!-- FINAL -->
-<section class="scene">
-  <h1>Love You Mumma 💖</h1>
-</section>
+      <section class="scene final-scene" id="finalScene" data-scene="final" aria-labelledby="finalTitle">
+        <div class="final-light" aria-hidden="true"></div>
+        <div class="final-copy">
+          <p class="script-accent">always, love you more than anything</p>
+          <h2 id="finalTitle">Love You Mumma</h2>
+          <p>
+            Thank you for being our mumma. Thankyou for everything. LOVE YOU LOADSS!!
+          </p>
+        </div>
+      </section>
+    </main>
 
-</main>
+    <nav class="bottom-nav" id="bottomNav" aria-label="Memory universe navigation">
+      <button class="nav-button active" type="button" data-open-scene="dashboard" aria-label="Home">
+        <span>⌂</span>
+        <small>Home</small>
+      </button>
+      <button class="nav-button" type="button" data-open-scene="hearts" aria-label="Hearts">
+        <span>❤️</span>
+        <small>Hearts</small>
+      </button>
+      <button class="nav-button" type="button" data-open-scene="music" aria-label="Music">
+        <span>🎵</span>
+        <small>Music</small>
+      </button>
+      <button class="nav-button" type="button" data-open-scene="letters" aria-label="Letters">
+        <span>✉️</span>
+        <small>Letters</small>
+      </button>
+      <button class="nav-button" type="button" data-open-scene="memories" aria-label="Memories">
+        <span>📷</span>
+        <small>Memories</small>
+      </button>
+    </nav>
 
-</body>
+    <button class="sound-button" id="soundButton" type="button" aria-pressed="false">
+      <span>♪</span>
+      <small>Sound</small>
+    </button>
+
+    <button class="edit-button" id="editButton" type="button" aria-label="Edit content">
+      ✦
+    </button>
+
+    <aside class="editor-drawer" id="editorDrawer" aria-hidden="true" aria-labelledby="editorTitle">
+      <div class="drawer-panel">
+        <div class="drawer-header">
+          <div>
+            <p class="script-accent">make it yours</p>
+            <h2 id="editorTitle">Edit Memories</h2>
+          </div>
+          <button class="icon-button" id="closeEditorButton" type="button" aria-label="Close editor">×</button>
+        </div>
+
+        <label class="editor-field">
+          Heart messages
+          <textarea id="heartEditor" rows="4" spellcheck="true"></textarea>
+        </label>
+
+        <label class="editor-field">
+          Letter messages
+          <textarea id="letterEditor" rows="5" spellcheck="true"></textarea>
+        </label>
+
+        <label class="editor-field">
+          Spotify songs
+          <textarea
+            id="songEditor"
+            rows="6"
+            spellcheck="false"
+            placeholder="Title | Artist | https://open.spotify.com/track/..."
+          ></textarea>
+        </label>
+
+        <div class="upload-group">
+          <label class="file-drop">
+            <input id="photoUpload" type="file" accept="image/*" multiple />
+            <span>Upload photos</span>
+            <small>Photos become Polaroids and save in this browser.</small>
+          </label>
+        </div>
+
+        <div id="polaroidTrack" class="polaroid-track">
+          <div class="photo-frame">
+          <img src="images/m1.jpg" alt="Memory 1">
+        </div>
+
+        <div class="photo-frame">
+          <img src="images/m2.jpg" alt="Memory 2">
+        </div>
+
+        <div class="photo-frame">
+          <img src="images/m3.jpg" alt="Memory 3">
+        </div>
+
+  <div class="photo-frame">
+    <img src="images/m4.jpg" alt="Memory 4">
+  </div>
+
+  <div class="photo-frame">
+    <img src="images/m5.jpg" alt="Memory 5">
+  </div>
+
+  <div class="photo-frame">
+    <img src="images/m6.jpg" alt="Memory 6">
+  </div>
+
+  <div class="photo-frame">
+    <img src="images/m7.jpg" alt="Memory 7">
+  </div>
+
+  <div class="photo-frame">
+    <img src="images/m8.jpg" alt="Memory 8">
+  </div>
+
+  <div class="photo-frame">
+    <img src="images/m9.jpg" alt="Memory 9">
+  </div>
+
+  <div class="photo-frame">
+    <img src="images/m10.jpg" alt="Memory 10">
+  </div>
+
+      <div class="photo-frame">
+        <img src="images/m11.jpg" alt="Memory 11">
+      </div>
+     </div>
+
+        <button class="save-button" id="saveEditsButton" type="button">Save changes</button>
+      </div>
+    </aside>
+  </body>
 </html>
