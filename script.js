@@ -53,57 +53,57 @@ const defaultContent = {
       
       title: "love",
       caption: "beautiful moments.",
-      image: "images/m1.jpg"
+      image: "m1.jpg"
     },
     {
       title: "love",
       caption: "beautiful moments.",
-      image: "images/m2.jpg"
+      image: "m2.jpg"
     },
     {
       title: "memo",
       caption: "moments",
-      image: "images/m3.jpg"
+      image: "m3.jpg"
     },
     {
       title: "love",
       caption: "beautiful moments.",
-      image: "images/m4.jpg"
+      image: "m4.jpg"
     },
     {
       title: "love",
       caption: "beautiful moments.",
-      image: "images/m5.jpg"
+      image: "m5.jpg"
     },
     {
       title: "love",
       caption: "beautiful moments.",
-      image: "images/m6.jpg"
+      image: "m6.jpg"
     },
     {
       title: "love",
       caption: "beautiful moments.",
-      image: "images/m7.jpg"
+      image: "m7.jpg"
     },
     {
       title: "love",
       caption: "beautiful moments.",
-      image: "images/m8.jpg"
+      image: "m8.jpg"
     },
     {
       title: "love",
       caption: "beautiful moments.",
-      image: "images/m9.jpg"
+      image: "m9.jpg"
     },
     {
       title: "love",
       caption: "beautiful moments.",
-      image: "images/m10.jpg"
+      image: "m10.jpg"
     },
     {
       title: "love",
       caption: "beautiful moments.",
-      image: "images/m11.jpg"
+      image: "m11.jpg"
     },
   ],
 };
