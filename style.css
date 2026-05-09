@@ -1572,3 +1572,33 @@ body.ready .bottom-nav {
   width: 100%;
   margin-top: 2rem;
 }
+/* ===== MEMORY GALLERY SCROLL FIX ===== */
+
+#memoriesScene {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-bottom: 8rem !important; /* space above bottom nav */
+  -webkit-overflow-scrolling: touch;
+}
+
+.memory-gallery {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 2rem !important;
+  width: 100% !important;
+  margin-top: 2rem !important;
+}
+
+.photo-frame {
+  width: 100% !important;
+  max-width: 520px !important;
+  margin: 0 auto !important;
+}
+
+.photo-frame img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
