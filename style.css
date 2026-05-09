@@ -1565,3 +1565,10 @@ body.ready .bottom-nav {
   flex: 0 0 auto;
   scroll-snap-align: center;
 }
+.memory-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
+}
