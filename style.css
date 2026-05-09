@@ -1636,3 +1636,51 @@ body.ready .bottom-nav {
   border-radius: 8px !important;
   display: block !important;
 }
+/* ===== FINAL MOBILE FIX FOR MEMORY GALLERY ===== */
+
+#memoriesScene {
+  position: relative !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding-bottom: 8rem !important;
+}
+
+.memory-gallery {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin-top: 1.5rem !important;
+  padding: 0 12px 2rem !important;
+  box-sizing: border-box !important;
+}
+
+.photo-frame {
+  width: 100% !important;
+  padding: 4px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-sizing: border-box !important;
+  transform: none !important;
+  rotate: 0deg !important;
+}
+
+.photo-frame img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  border-radius: 8px !important;
+}
+
+/* Make sure the scene container itself does not clip content */
+.scene.memories-scene {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
