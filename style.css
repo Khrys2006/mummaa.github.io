@@ -1602,3 +1602,37 @@ body.ready .bottom-nav {
   height: auto !important;
   display: block !important;
 }
+/* ===== SHOW ALL 11 PHOTOS ON ONE MOBILE SCREEN ===== */
+
+#memoriesScene {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-bottom: 6rem !important;
+}
+
+.memory-gallery {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 10px !important;
+  width: 100% !important;
+  margin-top: 1.5rem !important;
+  padding: 0 10px !important;
+}
+
+.photo-frame {
+  width: 100% !important;
+  padding: 6px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-sizing: border-box !important;
+}
+
+.photo-frame img {
+  width: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+  display: block !important;
+}
